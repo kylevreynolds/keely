@@ -14,18 +14,18 @@
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
+// ** MySQL settings - You can get this info from your web host ** //if (getenv('OPENSHIFT_APP_NAME') != "") {/** The name of the database for WordPress */define('DB_NAME', getenv('OPENSHIFT_APP_NAME'));/** MySQL database username */define('DB_USER', getenv('OPENSHIFT_MYSQL_DB_USERNAME'));/** MySQL database password */define('DB_PASSWORD', getenv('OPENSHIFT_MYSQL_DB_PASSWORD'));/** MySQL hostname */define('DB_HOST', getenv('OPENSHIFT_MYSQL_DB_HOST') . ':' . getenv('OPENSHIFT_MYSQL_DB_PORT'));/** These settings can be configured for your local development environmentand will not affect your OpenShift configuration */} else {define('DB_NAME', 'keely');/** MySQL database username */define('DB_USER', 'keely');/** MySQL database password */define('DB_PASSWORD', 'Dmitr!4bar');/** MySQL hostname */define('DB_HOST', 'bcf8176adf7ea25cd2a5ac5ee3e533b8fdd832ab.rackspaceclouddb.com');}
 /** The name of the database for WordPress */
-define('DB_NAME', 'keely');
+//define('DB_NAME', 'keely');
 
 /** MySQL database username */
-define('DB_USER', 'keely');
+//define('DB_USER', 'keely');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'Dmitr!4bar');
+//define('DB_PASSWORD', 'Dmitr!4bar');
 
 /** MySQL hostname */
-define('DB_HOST', 'bcf8176adf7ea25cd2a5ac5ee3e533b8fdd832ab.rackspaceclouddb.com');
+//define('DB_HOST', 'bcf8176adf7ea25cd2a5ac5ee3e533b8fdd832ab.rackspaceclouddb.com');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
